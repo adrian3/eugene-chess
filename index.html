@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Play Eugene, a classic chess app, now packaged for the web as a progressive web app." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Eugene Chess" />
+    <title>Eugene Chess Engine</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="icons/icon-60@3x.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-60@3x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-76@2x.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-72@2x.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/icon-60@2x.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/icon@2x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/icon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/icon-60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/icon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/app-styles.css">
+    <script src="scripts/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/jquery-1.11.0.min.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="scripts/jqtouch-jquery.min.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="scripts/jquery.jnotify.js" type="text/javascript"></script>
+    <script type="text/ecmascript" src="scripts/xhr.js"></script>
+    <script type="text/ecmascript" src="scripts/chess.js"></script>
+</head>
+
+<body onload="initChess(),chess.readPGN(localStorage.getItem('CurrentGame'),amIWhite());">
+    <div id="jqt">
+        <!-- home -->
+        <div id="home" class="current">
+            <div class="logo">
+                <img src="images/players/eugene.svg" width="100%">
+            </div>
+            <a href="#play" class="blueButton">Play Eugene</a>
+            <p class="center">
+                <!-- <a href="#settings">Settings</a> --><a href="#credits">Credits</a></p>
+        </div>
+        <!-- Home Game Screen -->
+        <div id="play" class="currentx">
+            <div id="chessDesk"></div>
+            <div id="drawer">
+                <div id="controls">
+                    <div class="playbuttons">
+                        <img class="backward" src="images/icons/backward.svg" onclick="chess.backToStart();" />
+                        <div class="stoptoggle"><img src="images/icons/stop.svg" onclick="chess.stopMotion();" /></div>
+                        <div class="playtoggle"><img src="images/icons/play.svg" onclick="chess.navigate(1, true);" /></div>
+                        <img class="forward" src="images/icons/forward.svg" onclick="chess.returnToEnd();" />
+                    </div>
+                    <div class="forwardback">
+                        <img src="images/icons/go-previous.svg" onclick="chess.navigate(-1);">
+                        <img src="images/icons/go-next.svg" onclick="chess.navigate(1);" />
+                    </div>
+                </div>
+            </div>
+                <div class="tabReveal">
+                    <a onclick="$('.slideNav').addClass('slideRight').removeClass('slideLeft'),$('.tabHide').show(),$('.tabReveal').hide(),drawerToggle();">
+                        <img src="images/toolbar-reveal3.svg" height="30px" style="margin-bottom:-4px">
+                    </a>
+                </div>
+                <div class="slideNav slideLeft">
+                    <div class="tab">
+                        <a onclick="jQT.goTo('#home','slideright');">
+                            <img src="images/home.svg" width="30px">
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <a onclick="startNewGame();">
+                            <img src="images/new.svg" width="30px">
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <a onclick="helpAlert();">
+                            <img src="images/help.svg" width="30px">
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <a onclick="emailPGN();">
+                            <img src="images/mail.svg" width="30px">
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <a href="#settings">
+                            <img src="images/gear.svg" width="30px">
+                        </a>
+                    </div>
+                    <div class="tabHide">
+                        <a onclick="$('.slideNav').addClass('slideLeft').removeClass('slideRight'),$('.tabHide').hide(),$('.tabReveal').show(),drawerToggle();">
+                            <img src="images/toolbar-back.svg" height="30px" style="margin-bottom:-4px">
+                        </a>
+                    </div>
+                </div>
+                <div class="hide">
+                    <form name="preloadgameCtrl3" onsubmit="return(false);">
+                        <span id="viewBtn1" onclick="chess.setView(1);pressVwBtn(1);" onmousedown="return(false);"></span>
+                        <input type="radio" name="preloadgameCtrl2" id="white2" checked />
+                        <input type="radio" name="preloadgameCtrl2" id="black2" />
+                        <textarea rows="10" cols="50" id="preloadgame"></textarea>
+                    </form>
+                </div>
+        </div>
+        <!-- Credits -->
+        <div id="credits">
+            <div class="toolbar">
+                <h1>Credits</h1>
+                <a class="back" href="#home">Home</a>
+            </div>
+            <img class="bio_photo" src="images/players/adrian.png" width="300" height="300">
+            <h1>Adrian Hanft, III</h1>
+            <h3>Designer/Developer</h3>
+            <p>Thank you for purchasing this app. I hope you enjoyed it. My name is Adrian Hanft, III. I have loved chess since about fifth grade when my dad taught me how to play. Thanks, dad. In addition to creating this app, I am also a designer, photographer, and web developer. If you enjoyed this app, you might also like my chess apps:</p>
+            <p><a target="_blank" href="https://itunes.apple.com/be/app/chess-server/id998153813?mt=8">Chess Server (Free)</a>
+                <p><a target="_blank" href="https://itunes.apple.com/us/app/immortal-game-greatest-chess/id613890349?mt=8">Immortal Game ($0.99)</a>
+                    <p><a target="_blank" href="http://itunes.apple.com/us/app/bobby-fischer-complete-collection/id426892039?mt=8#">Bobby Fischer Pro, $1.99</a></p>
+                    <p><a target="_blank" href="http://itunes.apple.com/us/app/chess-puzzles-pro/id432827559?mt=8#">Chess Puzzles Pro, $1.99</a></p>
+                    <p><a target="_blank" href="https://itunes.apple.com/us/app/grandmaster-archive/id471186727?mt=8">Grandmaster Archive, $4.99</a></p>
+                    <p>Please follow my writing at <a target="_blank" href="http://www.adrian3.com">adrian3.com</a> and follow me on Twitter <a target="_blank" href="https://twitter.com/ade3">@ade3</a>. Thanks again for your support.
+                    </p>
+        </div>
+        <!-- More Apps -->
+        <div id="moreapps">
+            <div class="toolbar">
+                <a class="back" href="#home">Home</a>
+                <h1>More Apps</h1>
+            </div>
+            <ul class="rounded">
+                <li class="arrow">
+                    <a target="_blank" href="https://itunes.apple.com/be/app/chess-server/id998153813?mt=8"><img class="chessicon" src="images/players/chess-server-1024x1024.png" width="57" height="57">Chess Server</a>
+                </li>
+<!--                 <li class="arrow">
+                    <a target="_blank" href="http://itunes.apple.com/us/app/eugene-chess-hd/id418816633?mt=8"><img class="chessicon" src="images/players/eugene-1024x1024.png" width="57" height="57">Eugene Chess</a>
+                </li> -->
+                <li class="arrow">
+                    <a target="_blank" href="https://itunes.apple.com/us/app/chess-puzzles-pro/id432827559?mt=8"><img class="chessicon" src="images/players/puzzles.png" width="57" height="57">Chess Puzzles</a>
+                </li>
+                <li class="arrow">
+                    <a target="_blank" href="http://design.adrian3.com/chess-messages.html"><img class="chessicon" src="images/players/chess-messages-1024x1024.png" width="57" height="57">Chess Messages</a>
+                </li>
+                <li class="arrow">
+                    <a target="_blank" href="https://itunes.apple.com/us/app/immortal-game-greatest-chess/id613890349?mt=8"><img class="chessicon" src="images/players/immortal-game.png" width="57" height="57">Immortal Game</a>
+                </li>
+                <li class="arrow">
+                    <a target="_blank" href="https://itunes.apple.com/us/app/grandmaster-archive/id471186727?mt=8"><img class="chessicon" src="images/players/grandmasterarchive.png" width="57" height="57">Grandmaster Archive
+                        <br />($4.99)</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Settings -->
+        <div id="settings" class="currentx">
+            <div class="toolbar">
+                <h1>Settings</h1>
+                <a class="back" href="#play">Game</a>
+            </div>
+            <div class="s-scrollwrapper" momentum="true" vScrollbar="false">
+                <div>
+                    <ul class="rounded">
+                        <li>Difficulty Level:</li>
+                        <li>
+                            <a class="easymode">Easy</a>
+                            <a class="normalmode">Normal</a>
+                            <a class="hardmode">Hard</a>
+                            <br />
+                            <div class="small">(Hard level may be slow.)</div>
+                        </li>
+                    </ul>
+                    <ul class="rounded">
+                        <li>Your piece color</li>
+                        <li>
+                            <a class="whiteside" onclick="selectYourColorAlert('white')">Play as white </a>
+                            <a class="blackside" onclick="selectYourColorAlert('black')">Play as black</a>
+                        </li>
+                    </ul>
+                    <ul class="rounded pieceSelection">
+                        <li>Promoted pawns become:
+                            <span class="promopiece">Queens</span>
+                        </li>
+                        <li>
+                            &#9813; <a id="selectQueen">Queen</a>
+                            <br />&#9814; <a id="selectRook">Rook</a>
+                            <br />&#9815; <a id="selectBishop">Bishop</a>
+                            <br />&#9816; <a id="selectKnight">Knight</a>
+                            <br />
+                        </li>
+                    </ul>
+                    <ul class="rounded">
+                        <li>Master Reset</li>
+                        <li><a onclick="resetApp();">Click here to restore all default settings.</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End JQT -->
+            </div>
+            <div id="hide">
+                <ul class="rounded">
+                    <li>Artificial Intelligence</li>
+                    <li>
+                        <form id="showform" name="chessCtrl1" onsubmit="return(false);">
+                            <input id="useAIAsk" name="useAI" type="checkbox" onclick="chess.useAI(this.checked);" checked />
+                            <div class="small">(Uncheck to turn off Eugene's AI.)</div>
+                            <div id="hide">
+                                <select onchange="chess.setPromotion(this.selectedIndex);" name="selPromo">
+                                    <option>Queen</option>
+                                    <option>Rook</option>
+                                    <option>Bishop</option>
+                                    <option>Knight</option>
+                                </select>
+                            </div>
+                    </li>
+                </ul>
+                <ul class="rounded">
+                    <div id="hide">
+                        <input type="button" name="strtBtn" value="New game" onclick="chess.organize(this.form.plyerClr1[1].checked);" />(Human:
+                        <input type="radio" name="plyerClr1" id="white1" checked />
+                        <label for="white1">white</label>
+                        <input type="radio" name="plyerClr1" id="black1" />
+                        <label for="black1">black</label>)
+                        <input type="text" name="plyDepthCtrl" value="0" size="2" onkeypress=";if(event.keyCode===13&&chess.setPlyDepth(this.value)){alert('Ply depth setted.' + (Number(this.value) > 2 ? '\nAttention! The game could be very slow.' : ' Good game :)'));}" />
+                    </div>
+                    </form>
+                    </li>
+                </ul>
+                <ul class="rounded">
+                    <li>Personalization</li>
+                    <li>Your Name:
+                        <textarea id="myname" rows="1" cols="40"></textarea>
+                        <li>Your Email Address:
+                            <textarea id="myemail" rows="1" cols="40"></textarea>
+                        </li>
+                        <li>
+                            <input id="myemailbutton" type="submit" value="Save">
+                            <div class="small">(This is just used to send your games via email. No spam, we promise!)</div>
+                        </li>
+                </ul>
+            </div>
+            <script src="scripts/fastclick.js" type="text/javascript" charset="utf-8"></script>
+            <script src="scripts/defaults.js" type="text/javascript" charset="utf-8"></script>
+            <script src="scripts/app.js" type="text/javascript" charset="utf-8"></script>
+            <script src="scripts/pwa.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,1413 @@
+@font-face {
+  /*font-family: 'OpenSansCondensedLight';*/
+  /*src: url("../fonts/OpenSans-CondLight-webfont.ttf") format("truetype");*/
+  font-weight: normal;
+  font-style: normal; }
+
+#jqt, a, .toolbar h1, h1, h2, ul li, li.arrow, #tabbar a > strong {
+    font-family: -apple-system, "OpenSansCondensedLight","Helvetica Neue", "Lucida Grande";
+}
+body {
+    color:#666;
+    /*font-family:'trebuchet ms', verdana, sans-serif;*/
+    background-color: #fff;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+/*td#movehighlightbgcolor img {
+    background-color: #ff9900;
+}
+td#movehighlightreset img {
+    background-color: #aaffff;
+}*/
+.current {
+}
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 0px dotted rgba(0, 0, 0, 0.3);
+}
+#Welcome.current {
+    background: none;
+}
+#column2 {
+    text-align: left;
+    float: right;
+    margin-right: 430px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+#tmp4 {
+    float: left;
+}
+ul.edgetoedge #gamelist li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    color: #fffeff;
+}
+td#buttons {
+    margin: 0px 0 0 0;
+    padding: 20px 0 15px;
+}
+ul.gamenav {
+    margin: -155px 0 0 0;
+    border-width: 0px;
+    display:;
+}
+li.next {
+    width: 60px;
+    margin: -30px 0 0 440px;
+    float: left;
+}
+li.previous {
+    margin: -10px 0 0 50px;
+    width: 70px;
+    float: left;
+}
+li.previous, li.next {
+    font-size: 10px;
+}
+.previous a.goback, .next a.slideup, .previous a.firstlink {
+    text-indent: -999px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.previous a.goback {
+    background: transparent url('../images/buttons/minimal/previousgame.png') no-repeat;
+}
+.next a.slideup {
+    background: transparent url('../images/buttons/minimal/nextgame.png') no-repeat;
+}
+ul.gamenav li.previous, ul.gamenav li.next {
+    background-color: transparent;
+    background-image: none;
+    border-width: 0;
+}
+
+.playtoggle, .stoptoggle {
+    overflow: hidden;
+    float: left;
+}
+.backward, .forward {
+    float: left;
+    display: block;
+}
+
+#drawer {
+    /*position: absolute;*/
+    height: 58px;
+    margin: 0 auto;
+}
+#options, #controls {
+    /*position: absolute;*/
+    height: 58px;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+}
+#options p {
+    margin: 4px 0 0 0;
+}
+#options a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0px 10px 0;
+}
+#controls img {
+    max-width: 28px;
+}
+/* @group Home Panel */
+ #home.current p {
+    padding: 0 20px;
+}
+.homeimage {
+    margin: 0 0 0 230px;
+}
+#home.current ul.rounded {
+    width: 350px;
+    margin: 20px auto 0 auto;
+}
+#home.current p {
+    /*width: 350px;*/
+    margin: 10px auto 0 auto;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+#home.current .blueButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+#home.current h2 {
+    width: 350px;
+    margin: 20px auto 0 auto;
+    color: #fff;
+}
+
+td input {
+    background-color: transparent;
+}
+#PGNBodyArea {
+    -webkit-backface-visibility: hidden;
+    -webkit-box-sizing: border-box;
+    display: inline;
+}
+#chessboard table tbody tr td table tbody tr td table tbody tr td {
+    background-color: transparent;
+}
+#chessboard table tbody tr td table tbody tr td table tbody tr td {
+    color: #000000;
+}
+
+
+
+td input {
+    background-color: transparent;
+}
+#chessboard table tbody tr td table tbody tr td table tbody tr td {
+    background-color: transparent;
+}
+#chessboard table tbody tr td table tbody tr td table tbody tr td {
+    color: #000000;
+}
+#topTable tbody tr td table img {
+    border: 0px;
+}
+#currentmove, #gametitle {
+    width: 620px;
+    margin: 0;
+    padding: 0px;
+    height: 20px;
+}
+#currentmove {
+    margin: 10px 0 -2px 0;
+}
+#currentmove, #gametitle #tbl tbody tr td {
+    color: #fff;
+}
+#gametitle #tbl tbody tr td {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+/* @group iphone sizes */
+ html, .current {
+    /*full size image  1024x1024*/
+    -webkit-background-size: 512px 512px;
+    /* these dimensions are half of actual size to compensate for the iPhone 4 doubling image sizes on Retina display */
+}
+#topTable {
+    background-size: cover;
+    margin: 0 0 0 0px;
+}
+
+/* @end */
+
+
+/* @group Buttons */
+ #buttons {
+    width: 280px;
+    margin: -70px auto 20px auto;
+    padding: 0 10px 0 15px;
+    color: #000;
+}
+#buttons a {
+    color: #fff;
+    font-size: 11px;
+}
+#buttonnav {
+    width: 275px;
+    height: 30px;
+    margin: 0px auto 5px auto;
+    text-align: center;
+}
+#menunav {
+    width: 320px;
+    height: 20px;
+    margin: 25px auto 0px auto;
+    text-align: center;
+}
+.playbuttons {
+    float: left;
+    margin: 0px 0 0 20px;
+}
+.flipbox {
+    float: left;
+    margin: 0px 0px 0 42px;
+}
+.forwardback {
+    width: 80px;
+    float: right;
+    margin: 0px 5px 0 0px;
+}
+.forwardback img {
+    margin: 50px 0 0 0;
+}
+img.tbBtn {
+    cursor: pointer;
+    /*margin: -2px 0 0 0;*/
+}
+#controls img {
+    margin-top: -6px;
+}
+.tbBtn {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+#setViewBtns {
+    width: auto;
+    float: left;
+}
+#setViewBtns span {
+    margin: 0 3px;
+    display: inline-block;
+    font: 12px / 13px"Lucida Grande", sans-serif;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    padding: 3px 6px;
+    border: 0px solid rgba(0, 0, 0, 0.6);
+    background-color: #969696;
+    cursor: default;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+}
+#setViewBtns span.pressedBtn {
+    background: #B5B5B5;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+    box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+}
+#settings.current a.currentlevel {
+    color: #000;
+    text-decoration: underline;
+}
+ul.rounded li a {
+    display: inline;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 0px 0 10px;
+}
+ul.rounded li a {
+    color: #ccc;
+}
+.logo {
+    margin-top: 50px;
+    text-align: center;
+}
+#jqt #home li.arrow {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left:0;
+    padding-left:20px;
+    border-color:#000;
+}
+#jqt #home ul {
+    background-color: transparent;
+    border-radius: 10px;
+    border-color:#000;
+}
+#flipbuttons {
+    position: relative;
+    width: 30px;
+}
+#buttonnav a.savelink {
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    float: right;
+    margin: 8px 20px 0 0;
+    position: relative;
+}
+#blackside, #whiteside {
+    position: absolute;
+    width: 30px;
+    top: 9px;
+}
+#savelink {
+    float: left;
+    margin: 0 0 0 50px;
+}
+a.savelink {
+    margin: 0 0 0 0px;
+}
+#forwardback img {
+    width: 28px;
+}
+/* @end */
+
+/* @group Jquery Notifications */
+ .jnotify-container {
+    position: fixed;
+    top: 350px;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+}
+.jnotify-container .jnotify-notification {
+    /*position: absolute;*/
+    width: 100%;
+    border-bottom: 1px solid #1e1e1e;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0 0 10px 0;
+}
+.jnotify-container a {
+    color: #fff;
+}
+.jnotify-container .jnotify-notification .jnotify-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1;
+}
+.gamesav {
+    top: 10px;
+    margin: 10px 0 0 0;
+}
+.jnotify-container .jnotify-notification a.jnotify-close, .jnotify-container .jnotify-notification a.jnotify-close:link, .jnotify-container .jnotify-notification a.jnotify-close:visited, .jnotify-container .jnotify-notification a.jnotify-close:focus, .jnotify-container .jnotify-notification a.jnotify-close:hover {
+    cursor: pointer;
+}
+.jnotify-container .jnotify-notification .jnotify-message, .jnotify-message div {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 24px;
+}
+.jnotify-container .jnotify-notification .jnotify-message * {
+    font-size: 12px;
+    line-height: 14px;
+    margin: -10px 0 0;
+}
+/* notification type == "error" */
+ .jnotify-container .jnotify-notification-error .jnotify-background {
+    background-color: #d79eac;
+}
+.jnotify-container .jnotify-notification-error .jnotify-close, .jnotify-container .jnotify-notification-error .jnotify-message {
+    color: #a72947 !important;
+}
+/* notification type == "warning" */
+ .jnotify-container .jnotify-notification-warning .jnotify-background {
+    background-color: #fff7d1;
+}
+.jnotify-container .jnotify-notification-warning .jnotify-close, .jnotify-container .jnotify-notification-warning .jnotify-message {
+    color: #c2a928 !important;
+}
+a.jnotify-close {
+    color: #fff;
+}
+/* @end */
+
+/* @group Control Panel */
+ #chessCtrlPanel {
+    /*display: none;*/
+    /*position: relative;*/
+    width: 90px;
+    max-height: 15px;
+    overflow: hidden;
+    position:absolute;
+    color: #000;
+    font-size: 12px;
+    font-family: Tahoma, Arial, Verdana, Helvetica;
+    top: 0px;
+    right: 0px;
+    /*margin: 0px auto;*/
+    padding: 3px 0 0 0;
+    /*border-top: 1px solid rgba(255,254,255,0.1);*/
+    z-index: 999;
+}
+.hideme {
+    display: none;
+}
+a.chessCtrlBtn:link, span.chessCtrlBtn {
+    margin: 0 20px 20px 0;
+    text-decoration: none;
+    color: #000000;
+    cursor: default;
+    height: 21px;
+    padding: 0 8px;
+    font: 13px / 20px"Lucida Grande", sans-serif, Arial;
+    border-radius: 3px;
+    background: rgb(235, 235, 235);
+}
+a.chessCtrlBtn:active:hover, span.chessCtrlBtn:active:hover {
+    background-color: #79A7D5;
+}
+#chessCtrlPanel select, #chessCtrlPanel input[type=text] {
+    background-color: transparent;
+}
+img.chessicon {
+    float: left;
+    margin: 0 10px 0 0;
+}
+#chessCtrlPanel form {
+}
+#chessCtrlPanel option {
+}
+#chessCtrlPanel select, #chessMoves {
+    text-align: right;
+}
+#chessClosePanel {
+    display: none;
+    width: auto;
+    height: auto;
+    margin: 0 12px 1px auto;
+    float: right;
+}
+#chessCtrlPanel p {
+    margin: 0 0 0px 0;
+    /*text-align: left;*/
+}
+input#chessAlgebraic, a.chessCtrlBtn, span.chessCtrlBtn {
+    /*float: left;*/
+}
+#chessInfo {
+    margin: 0px 0 0 0;
+    /*width: 180px;*/
+    color: #fff;
+    /*float: left;*/
+}
+#chessInfo span.intLink {
+    color: #000;
+    text-decoration: underline;
+}
+span.infoKey, span.infoVal {
+    color: #fff;
+    cursor: pointer;
+}
+span.infoKey {
+    font-weight: bold;
+    color: #fff;
+}
+#chessInfo p {
+    text-align: left;
+    margin: 6px 4px 0px 4px;
+    clear: left;
+    line-height: 20px;
+}
+a#tab_0.options.enabled::before, a#tab_1.controls.enabled::before {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, .3)));
+    z-index: 1;
+    background-color:#000;
+}
+a#tab_2.enabled::before, a#tab_3.enabled::before, a#tab_4.enabled::before {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .9)), to(rgba(255, 255, 255, .6)));
+}
+/* @end */
+
+@-webkit-keyframes vibrate {
+    0% {
+        -webkit-transform: rotate(-5deg);
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+    }
+    50% {
+        -webkit-transform: rotate(-5deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(-5deg)
+    }
+}
+#flatChessboard .selected div img {
+    -webkit-animation-duration: 0.7s;
+    -webkit-animation-name: vibrate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+}
+
+#chessSizeHandle {
+    background-color: transparent;
+    color: #333333;
+    font-size: 24px;
+    line-height: 24px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: -12px;
+    bottom: -12px;
+    float: right;
+    margin-top: auto;
+    cursor: se-resize;
+}
+#chessMoves {
+    margin: 0;
+    font-size: 10px;
+    border-width: 0px;
+}
+select#chessMoves {
+    /*position: absolute;*/
+}
+#chessMoves, #chessAlgebraic {
+    background-color: transparent;
+    color: #000;
+    color: #fff;
+}
+#chessAlgebraic {
+    width: 200px;
+    color: #fff;
+    margin-top: 1px;
+    font-size: 10px;
+    display: none;
+}
+#chess2DBox {
+    /**
+	* width: [DYNAMIC VALUE];
+	* height: [DYNAMIC VALUE];
+	*/
+    float: right;
+}
+#chessCurtain {
+    display:table;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 10000002;
+}
+#chessLoading {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px #000000 solid;
+    color: #ffff00;
+}
+span.intLink, #chessClosePanel {
+    cursor: pointer;
+}
+div.chessFilmBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px #000000 solid;
+    background-color: #ffffaa;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 10000000;
+}
+#hide, .hide {
+    display: none;
+}
+hr {
+    width: 30%;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+#pgnTable {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 0;
+}
+#pgnTable tr td {
+    padding: 2px;
+}
+
+#chessToolBar {
+    width: 550px;
+    height: auto;
+    margin: 12px auto;
+    background-color: #969696;
+    -moz-box-shadow: inset 0 25px 27px -10px #BDBDBD;
+    -webkit-box-shadow: inset 0 25px 27px -10px #BDBDBD;
+    box-shadow: inset 0 25px 27px -10px #BDBDBD;
+    border-bottom: 1px solid #424242;
+    text-align:center;
+    padding: 6px 3px 2px 3px;
+}
+form a {
+    color: #fff;
+}
+li.piecestyle, li.boardstyle, li.currentgame, li.difficultylevel, li.boardside, li.y1 {
+    display: none;
+}
+.hide {
+    display: none;
+}
+/*.reveal {
+    color: #ff9900;
+}*/
+#jqt li form textarea, ul li form input {
+    display: none;
+}
+textarea#myname, textarea#myemail {
+    /*min-height: 200px;*/
+    height:30px;
+    padding: 0 0 0 4px;
+}
+textarea {
+    padding: 4px !important;
+    height: 30px !important;
+}
+.small {
+    display: inline;
+    font-size: 10px;
+}
+input#useAIAsk {
+    float: left;
+    margin: 5px 15px 0 0;
+}
+ul li form#showform input {
+    display: block;
+}
+.icon {
+    display: inline;
+}
+#listbuttons a.icon {
+    display: inline;
+    margin-right: 10px
+}
+ul li a {
+    display: inline;
+}
+ul#gamelist li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+ul#headerconnected {
+    margin-bottom: -25px;
+}
+ul#headerconnected li {
+    padding-bottom: 20px;
+}
+a#selectKnight, a#selectBishop, a#selectQueen, a#selectRook {
+    margin: 0;
+    padding: 0 5px 0 0px;
+}
+#listbuttons {
+    padding: 5px 0 0 12px;
+}
+
+
+
+#jqt a.list:active, #tab_1 a:active, #tab_2 a:active, #tab_3 a:active, #tab_4 a:active, #tab_5 a:active {
+  color: #fff; }
+
+#jqt ul li input[type='submit'] {
+    background-color: rgba(0, 174, 239, 0.9) !important;
+    color: #fff;
+    background: none;
+}
+#credits {
+  color: #333; }
+
+#credits a {
+  font-size: 16px; }
+
+#credits p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 570px; }
+#credits a {
+    text-decoration: underline;
+}
+
+#credits h3, #credits h1 {
+  padding-left: 10px; }
+#credits h3, #credits h3 a {
+    margin: 0 0 15px;
+    font-size: 14px;
+}
+#credits h1 {
+    margin: 0 0 5px;
+    font-size: 24px;
+}
+#credits img.bio_photo {
+  width: 150px;
+  height: 150px;
+  margin: 10px 105px 10px 10px;
+  border-radius: 30px; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #credits img.bio_photo {
+      width: 250px;
+      height: 250px;
+      margin: 10px 259px;
+      border-radius: 60px; } }
+
+#jqt .blueButton {
+    background-color: #00aeef;
+    max-width: 300px;
+    margin: 0 auto 10px;
+    padding-top: 4px;
+    line-height: 60px;
+  margin-bottom: 30px;
+}
+#jqt .blueButton:active, #jqt .blueButton.active {
+    background-color: #2a9dcf !important;
+    color:#fff;
+}
+p.center {
+    text-align: center;
+}
+p.center a {
+    margin: 0 10px;
+}
+
+/* corner radius for squares in the corners when selected or highlighted */
+#flatSq21.selected, #flatSq21.highlight {
+    -moz-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#flatSq28.selected, #flatSq28.highlight {
+    -moz-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#flatSq91.selected, #flatSq91.highlight {
+    -moz-border-top-left-radius: 8px;
+    -webkit-top-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+#flatSq98.selected, #flatSq98.highlight {
+    -moz-border-top-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+    #jqt #home {
+        background-color: #fff;
+    }
+    
+    .logo {
+        background-color: #efeff4;
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    
+    .logo img {
+        margin-bottom: -5px;
+    }
+    
+    .tab a {
+        height: 30px;
+    }
+    
+    .tab a {
+        width: 17.5%;
+        float: left;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .tab a:active {
+        background-color: #eb008b;
+    }
+    
+    .slideNav {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        background-color: #a7a9ac;
+    }
+    
+    .slideLeft {
+        width: 100vw;
+        left: -100vw;
+        /*background-color: #efeff4 !important;*/
+        transition: all 0.5s ease;
+    }
+    
+    .slideRight {
+        width: 100vw;
+        left: 0vw;
+        transition: all 0.5s ease;
+    }
+    
+    .tabReveal {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+    }
+    
+    .tabHide {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+table#flatChessboard tr:last-child td:first-child {
+    -moz-border-radius-bottomleft:8px;
+    -webkit-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px
+}
+
+table#flatChessboard tr:last-child td:last-child {
+    -moz-border-radius-bottomright:8px;
+    -webkit-border-bottom-right-radius:8px;
+    border-bottom-right-radius:8px
+}
+table#flatChessboard tr:first-child td:first-child {
+    -moz-border-radius-topleft:8px;
+    -webkit-top-bottom-left-radius:8px;
+    border-top-left-radius:8px
+}
+
+table#flatChessboard tr:first-child td:last-child {
+    -moz-border-radius-topright:8px;
+    -webkit-border-top-right-radius:8px;
+    border-top-right-radius:8px
+}
+.close, .arrow img {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+#flatChessboard.board1 {
+    background-size: cover;
+}
+table {
+    border-collapse: collapse;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+#flatSq91,
+#flatSq93,
+#flatSq95,
+#flatSq97,
+#flatSq71,
+#flatSq73,
+#flatSq75,
+#flatSq77,
+#flatSq51,
+#flatSq53,
+#flatSq55,
+#flatSq57,
+#flatSq31,
+#flatSq33,
+#flatSq35,
+#flatSq37,
+#flatSq22,
+#flatSq24,
+#flatSq26,
+#flatSq28,
+#flatSq42,
+#flatSq44,
+#flatSq46,
+#flatSq48,
+#flatSq62,
+#flatSq64,
+#flatSq66,
+#flatSq68,
+#flatSq82,
+#flatSq84,
+#flatSq86,
+#flatSq88
+ {
+    background-color: #e2e2e2;
+}
+
+#flatSq92,
+#flatSq94,
+#flatSq96,
+#flatSq98,
+#flatSq72,
+#flatSq74,
+#flatSq76,
+#flatSq78,
+#flatSq52,
+#flatSq54,
+#flatSq56,
+#flatSq58,
+#flatSq32,
+#flatSq34,
+#flatSq36,
+#flatSq38,
+#flatSq21,
+#flatSq23,
+#flatSq25,
+#flatSq27,
+#flatSq41,
+#flatSq43,
+#flatSq45,
+#flatSq47,
+#flatSq61,
+#flatSq63,
+#flatSq65,
+#flatSq67,
+#flatSq81,
+#flatSq83,
+#flatSq85,
+#flatSq87 {
+    background-color: #666;
+}
+#flatSq91.highlight, #flatSq91.selected,
+#flatSq93.highlight, #flatSq93.selected,
+#flatSq95.highlight, #flatSq95.selected,
+#flatSq97.highlight, #flatSq97.selected,
+#flatSq71.highlight, #flatSq71.selected,
+#flatSq73.highlight, #flatSq73.selected,
+#flatSq75.highlight, #flatSq75.selected,
+#flatSq77.highlight, #flatSq77.selected,
+#flatSq51.highlight, #flatSq51.selected,
+#flatSq53.highlight, #flatSq53.selected,
+#flatSq55.highlight, #flatSq55.selected,
+#flatSq57.highlight, #flatSq57.selected,
+#flatSq31.highlight, #flatSq31.selected,
+#flatSq33.highlight, #flatSq33.selected,
+#flatSq35.highlight, #flatSq35.selected,
+#flatSq37.highlight, #flatSq37.selected,
+#flatSq22.highlight, #flatSq22.selected,
+#flatSq24.highlight, #flatSq24.selected,
+#flatSq26.highlight, #flatSq26.selected,
+#flatSq28.highlight, #flatSq28.selected,
+#flatSq42.highlight, #flatSq42.selected,
+#flatSq44.highlight, #flatSq44.selected,
+#flatSq46.highlight, #flatSq46.selected,
+#flatSq48.highlight, #flatSq48.selected,
+#flatSq62.highlight, #flatSq62.selected,
+#flatSq64.highlight, #flatSq64.selected,
+#flatSq66.highlight, #flatSq66.selected,
+#flatSq68.highlight, #flatSq68.selected,
+#flatSq82.highlight, #flatSq82.selected,
+#flatSq84.highlight, #flatSq84.selected,
+#flatSq86.highlight, #flatSq86.selected,
+#flatSq88.highlight, #flatSq88.selected,
+#flatSq92.highlight, #flatSq92.selected,
+#flatSq94.highlight, #flatSq94.selected,
+#flatSq96.highlight, #flatSq96.selected,
+#flatSq98.highlight, #flatSq98.selected,
+#flatSq72.highlight, #flatSq72.selected,
+#flatSq74.highlight, #flatSq74.selected,
+#flatSq76.highlight, #flatSq76.selected,
+#flatSq78.highlight, #flatSq78.selected,
+#flatSq52.highlight, #flatSq52.selected,
+#flatSq54.highlight, #flatSq54.selected,
+#flatSq56.highlight, #flatSq56.selected,
+#flatSq58.highlight, #flatSq58.selected,
+#flatSq32.highlight, #flatSq32.selected,
+#flatSq34.highlight, #flatSq34.selected,
+#flatSq36.highlight, #flatSq36.selected,
+#flatSq38.highlight, #flatSq38.selected,
+#flatSq21.highlight, #flatSq21.selected,
+#flatSq23.highlight, #flatSq23.selected,
+#flatSq25.highlight, #flatSq25.selected,
+#flatSq27.highlight, #flatSq27.selected,
+#flatSq41.highlight, #flatSq41.selected,
+#flatSq43.highlight, #flatSq43.selected,
+#flatSq45.highlight, #flatSq45.selected,
+#flatSq47.highlight, #flatSq47.selected,
+#flatSq61.highlight, #flatSq61.selected,
+#flatSq63.highlight, #flatSq63.selected,
+#flatSq65.highlight, #flatSq65.selected,
+#flatSq67.highlight, #flatSq67.selected,
+#flatSq81.highlight, #flatSq81.selected,
+#flatSq83.highlight, #flatSq83.selected,
+#flatSq85.highlight, #flatSq85.selected,
+#flatSq87.highlight, #flatSq87.selected {
+    background-color: rgba(0, 174, 239, 0.9);
+}
+#chessDesk {
+    margin: 20px auto 5px auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+ div.gnotify {
+    z-index: 1000001;
+    position: absolute;
+    /*left: 0;*/
+    top: 12px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+div.gnotify.center {
+    top: 0;
+}
+div.gnotify-message span.intLink, div.gnotify-message a, div.gnotify-message a:link, div.gnotify-message a:visited, div.gnotify-message a:hover {
+    font-weight: bold;
+    text-decoration: inherit;
+    color: inherit;
+}
+ div.center div.gnotify-notification, div.center div.gnotify-closer {
+    margin-left: 0;
+    margin-right: 0;
+}
+div.gnotify div.gnotify-notification {
+    z-index: 1000001;
+    position: absolute;
+    background-color: rgba(0, 174, 239, 1);
+    color: #ffffff;
+    min-height: 25px;
+    padding: 0px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    display: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+div.gnotify div.gnotify-closer {
+    display: none;
+}
+div.gnotify div.gnotify-notification div.header {
+    font-size: 14px;
+    font-style: italic;
+    /*margin: -9px 0 0 0;*/
+}
+.gnotify-message p {
+    margin: 5px 10px 10px 10px ;
+}
+.header {
+    margin: 10px 10px 0px 10px;
+}
+div.gnotify div.gnotify-notification div.close {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: right;
+    background-color: rgba(0, 174, 239, 0.7);
+    /*padding-top: 7px;*/
+}
+/* @end */
+
+#flatChessboard {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+    display: table;
+}
+
+#chessDesk > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+}
+
+/*.piece {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-size: cover;
+}*/
+td img {
+    margin: -2px;
+}
+.close {
+    position: absolute;
+    top: -12px;
+}
+
+@media only screen and (orientation: portrait)  {
+    #chessDesk, #drawer, #controls {
+        width: 80vw !important;
+    }
+    .close {
+        width: 80vw !important;
+    }
+    .close {
+        margin-top: 20px;
+        height: 80vw !important;
+        margin-top: -80vw !important;
+    }
+    .gnotify-notification {
+        margin-top: 80vw !important;
+    }
+    .gnotify-message {
+        width: 80vw !important;
+    }
+    #flatChessboard {
+        width: 80vw !important;
+        height: 80vw !important;
+    }
+    td, td img {
+        height: 10vw !important;
+        width: 10vw !important;
+    }
+}
+@media only screen and (orientation: landscape)  {
+    #chessDesk, #drawer, #controls {
+        width: 64vh !important;
+    }
+    .close {
+        width: 64vh !important;
+    }
+    .close {
+        margin-top: 20px;
+        height: 64vh !important;
+        margin-top: -64vh !important;
+    }
+    .gnotify-notification {
+        margin-top: 64vh !important;
+    }
+    .gnotify-message {
+        width: 64vh !important;
+    }
+    #flatChessboard {
+        width: 64vh !important;
+        height: 64vh !important;
+    }
+    td, td img {
+        height: 8vh !important;
+        width: 8vh !important;
+    }
+    #chessDesk, div.gnotify {
+      margin-top: 10vh !important;
+    }
+}
+
+
+
+@media screen and (min-height: 480px) {
+
+    #chessDesk, div.gnotify {
+      margin-top: 10vh;
+    }
+    #jqt .logo {
+        padding-top: 100px;
+    }
+}
+@media screen and (min-height: 667px) {
+    #chessDesk, div.gnotify {
+      margin-top: 20vh;
+    }
+    #jqt .logo {
+        padding-top: 170px;
+    }
+}
+
+/* @group iPad */
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+#controls img {
+    transform: scale(1.5);
+} 
+
+}
+/* @end iPad Styles*/
+
+/* iPad Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+ {
+    #chessDesk, div.gnotify {
+      margin-top: 10vh;
+    }
+}
+
+/* iPad Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+ {
+    #jqt .logo {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #play #chessDesk {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+    }
+
+    #drawer,
+    #controls,
+    .slideNav {
+        width: 100%;
+    }
+
+    #home.current p,
+    #home.current ul.rounded,
+    #home.current h2,
+    #credits,
+    #moreapps,
+    #settings > .s-scrollwrapper,
+    #settings > #hide {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    #credits,
+    #moreapps,
+    #settings > .s-scrollwrapper,
+    #settings > #hide {
+        width: min(100%, 960px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #jqt > * {
+        min-height: 100dvh;
+    }
+
+    #controls {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .playbuttons {
+        margin-left: 12px;
+    }
+
+    .forwardback {
+        margin-right: 12px;
+    }
+}
+
+/* Keep the board and its navigation visible within the viewport. */
+#play {
+    box-sizing: border-box;
+}
+
+@media screen {
+    #play {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: max(env(safe-area-inset-top), 8px);
+        padding-bottom: max(env(safe-area-inset-bottom), 12px);
+        overflow: hidden;
+    }
+
+    #chessDesk,
+    #drawer,
+    #controls,
+    .tabReveal,
+    .slideNav {
+        flex: 0 0 auto;
+    }
+
+    #chessDesk,
+    div.gnotify {
+        margin-top: 8px !important;
+    }
+
+    #drawer {
+        margin-top: 6px;
+    }
+
+    #flatChessboard {
+        table-layout: fixed;
+    }
+
+    #flatChessboard td {
+        width: 12.5% !important;
+        aspect-ratio: 1 / 1;
+    }
+
+    #flatChessboard td img {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        display: block;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #play {
+        --board-size: min(80vw, calc(100dvh - 170px));
+    }
+
+    #chessDesk,
+    #drawer,
+    #controls,
+    #flatChessboard {
+        width: var(--board-size) !important;
+    }
+
+    #flatChessboard {
+        height: var(--board-size) !important;
+    }
+
+    .gnotify-message,
+    .close {
+        width: var(--board-size) !important;
+    }
+
+    .close {
+        height: var(--board-size) !important;
+        margin-top: calc(var(--board-size) * -1) !important;
+    }
+
+    .gnotify-notification {
+        margin-top: var(--board-size) !important;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #play {
+        --board-size: min(64vh, calc(100dvh - 130px));
+    }
+
+    #chessDesk,
+    #drawer,
+    #controls,
+    #flatChessboard {
+        width: var(--board-size) !important;
+    }
+
+    #flatChessboard {
+        height: var(--board-size) !important;
+    }
+
+    .gnotify-message,
+    .close {
+        width: var(--board-size) !important;
+    }
+
+    .close {
+        height: var(--board-size) !important;
+        margin-top: calc(var(--board-size) * -1) !important;
+    }
+
+    .gnotify-notification {
+        margin-top: var(--board-size) !important;
+    }
+}
+
