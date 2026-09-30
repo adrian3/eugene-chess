@@ -7,6 +7,7 @@
 #jqt, a, .toolbar h1, h1, h2, ul li, li.arrow, #tabbar a > strong {
     font-family: -apple-system, "OpenSansCondensedLight","Helvetica Neue", "Lucida Grande";
 }
+
 body {
     color:#666;
     /*font-family:'trebuchet ms', verdana, sans-serif;*/
@@ -1380,6 +1381,46 @@ td img {
     }
 }
 
+/* Keep the installed web app fixed while allowing long secondary screens to scroll. */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+body,
+#jqt {
+    position: fixed;
+    inset: 0;
+}
+
+#jqt {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+#jqt > * {
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 0 !important;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#credits,
+#moreapps,
+#settings {
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
 @media only screen and (orientation: landscape) {
     #play {
         --board-size: min(64vh, calc(100dvh - 130px));
@@ -1410,4 +1451,3 @@ td img {
         margin-top: var(--board-size) !important;
     }
 }
-
