@@ -1,4 +1,4 @@
-const CACHE_NAME = "eugene-pwa-v1";
+const CACHE_NAME = "eugene-pwa-v2";
 const APP_SHELL = [
     "./",
     "./index.html",
@@ -16,11 +16,8 @@ const APP_SHELL = [
     "./scripts/pwa.js",
     "./scripts/fastclick.js",
     "./images/players/eugene.svg",
-    "./icons/favicon-32.png",
-    "./icons/favicon-48.png",
-    "./icons/favicon-96.png",
-    "./icons/pwa-192.png",
-    "./icons/pwa-512.png"
+    "./images/icon.png",
+    "./apple-touch-icon.png"
 ];
 
 self.addEventListener("install", function (event) {
