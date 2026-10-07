@@ -21,8 +21,6 @@ Choose a difficulty and a color to begin. A quick practice game or a longer batt
 
 Originally available on iOS as Eugene Chess and Eugene Chess HD, Eugene is now back as a free web app. **Eugene Chess HD reached 172,023 downloads** on the App Store.
 
-*Lifetime iOS download totals (first-time downloads/purchases), from Ade’s App Store Connect export of September 29, 2026.*
-
 ## Keep it on your home screen
 
 These are progressive web apps (PWAs): open the link above to play, or install the app from your browser for quick access with its own icon.
